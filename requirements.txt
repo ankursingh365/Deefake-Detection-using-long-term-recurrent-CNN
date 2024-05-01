@@ -1,0 +1,9 @@
+flask
+torch
+torchvision  
+opencv-python
+numpy 
+dlib
+random2
+pandas 
+matplotlib

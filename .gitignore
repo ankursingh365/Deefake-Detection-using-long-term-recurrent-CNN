@@ -1,0 +1,4 @@
+.mp4
+app/model(1).pth
+__pycache__/
+*.pyc

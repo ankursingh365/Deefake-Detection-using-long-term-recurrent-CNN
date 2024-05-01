@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Deepfake Detection</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Upload Video for DeepFake Analysis</h2>
+            <form action="/detection" method="post" enctype="multipart/form-data">
+                <label for="fileInput">Choose file:</label>
+                <input type="file" id="fileInput" name="fileInput" accept=".mp4, .webm, .avi, .mov, .wmv" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Results</h2>
+            <div id="detectionResults">
+                {% if result %}
+                    <p>{{ result }}</p>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>
